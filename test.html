@@ -9,6 +9,11 @@
             background-color: var(--color0);
             color: var(--color7);
             text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         pre, code {
             font-size: 1rem;
@@ -25,39 +30,41 @@
         a:hover {
             color: var(--color15);
         }
-        /* .site-header {
+        /* .header-wrapper {
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: flex-start;
-            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2em;
             padding: 1em;
-            gap: 1em;
-        }
-        .ds {
-            min-width: 12ch;
-            text-align: left;
+            max-width: 1000px;
+            width: 90vw;
+            margin-top: 1em;
+            flex-wrap: wrap;
+        } */
+        .ds-logo {
+            align-self: flex-start;
+            padding-left: 5%;
+            max-width: 200px;
+            text-align: center;
             flex-shrink: 0;
+            position: fixed;
         }
-        .heading {
+        .site-header {
             flex-grow: 1;
             text-align: center;
-        } */
-        .site-header {
-            display: grid;
-            grid-template-columns: 1fr;
-            align-items: center;
-            gap: 1em;
             padding: 1em;
+            max-width: 800px;
+            width: 90vw;
+            box-sizing: border-box;
         }
-        .ds {
-            min-width: 12ch;
-            justify-self: start;
-        }
-        .heading {
-            text-align: center;
-            width: 100%;
-        }
+        /* @media (max-width: 600px) {
+            .ds-logo {
+                align-self: center;
+                padding-left: 0;
+                text-align: center;
+            }
+        } */
         .links {
             position: fixed;
             top: 40%;
@@ -73,8 +80,8 @@
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="ds">
+    <!-- <div class="header-wrapper"> -->
+        <div class="ds-logo">
             <a href="index.html" title="home">
                 <pre><code>
 ⠀⠀⢀⣠⡶⠖⠛⠓⣶⠀⠀⠀⠀⠀⠀
@@ -89,11 +96,12 @@
                 </code></pre>
             </a>
         </div>
-        <div class="heading">
-            <h1>devonian systems</h1>
-            <h3>sounds of prehistorie</h3>
+
+        <div class="site-header">
+                <h1>devonian systems</h1>
+                <h3>sounds of prehistorie</h3>
         </div>
-    </header>
+    <!-- </div> -->
 
     <main>
             <pre><code>
